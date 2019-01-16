@@ -1,0 +1,6 @@
+spring:
+  rabbitmq:
+    host: localhost
+    password: bitnami
+    port: 32808
+    username: user

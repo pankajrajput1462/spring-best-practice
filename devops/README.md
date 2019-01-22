@@ -90,3 +90,15 @@ Disable heapster:
 Now you can clean up the resources you created in your cluster:
 `$ kubectl delete service hello-node`
 `$ kubectl delete deployment hello-node`
+
+>Creating sample user
+
+Copy provided snippets to some dashboard-adminuser.yaml file and use kubectl apply -f dashboard-adminuser.yaml to create them.
+`apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: admin-user
+  namespace: kube-system`
+  
+  >Bearer Token
+  `kubectl -n kube-system describe secret $(kubectl -n kube-system get secret | grep admin-user | awk '{print $1}')`

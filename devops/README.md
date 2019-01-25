@@ -6,6 +6,22 @@
 List of images:
 `$ docker images`
 
+In your Dockerfile:
+ EXPOSE 3000 80 443 22
+ 
+
+To expose just one port, this is what you need to do:
+`$ docker run -p <host_port>:<container_port>`
+
+To expose multiple ports, simply provide multiple -p arguments:
+`$ docker run -p <host_port1>:<container_port1> -p <host_port2>:<container_port2>`
+
+In case you would like to expose a range of continuous ports, you can run docker like this:
+ `docker run -it -p 7100-7120:7100-7120/tcp `
+
+Eg.
+ `$ docker run -p 3001:3000 -p 23:22`
+
 List running docker process:
 `$ docker ps`
 
@@ -104,3 +120,12 @@ metadata:
   >Bearer Token
   
   `kubectl -n kube-system describe secret $(kubectl -n kube-system get secret | grep admin-user | awk '{print $1}')`
+  
+  >Rabbit MQ
+  
+  https://hub.docker.com/_/rabbitmq/
+  
+ docker run --name pankoo-rabbit -p 8080:15672 rabbitmq:3-management
+ 
+ 
+  

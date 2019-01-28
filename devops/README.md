@@ -90,3 +90,9 @@ Disable heapster:
 Now you can clean up the resources you created in your cluster:
 `$ kubectl delete service hello-node`
 `$ kubectl delete deployment hello-node`
+
+> Elastic Search
+
+Below are the commands which are  being frequently used for elastic search-
+
+``

@@ -126,7 +126,6 @@ metadata:
   https://hub.docker.com/_/rabbitmq/
   
  docker run --name pankoo-rabbit -p 8080:15672 rabbitmq:3-management
-
- # Mongo Db commands:
-
+ 
+ 
   

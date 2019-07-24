@@ -68,6 +68,9 @@ Get the pod list:
 View the Service:
 `$ kubectl get services`
 
+View service with pritty view:
+`$ kubectl get services -o json`
+
 View cluster events:
 `$ kubectl get events`
 
@@ -87,6 +90,9 @@ eg. `$ kubectl delete services hello-minikube`
 eg. `$ kubectl delete deployment hello-minikube`
 eg. `$ minikube stop`
 
+Delete minikube data:
+`rm -rf  ~/.minikube`
+
 >Enable addons
 
 List the currently supported addons:
@@ -100,6 +106,12 @@ View the Pod and Service you just created:
 
 Disable heapster:
 `$ minikube addons disable heapster`
+
+Add namespace:
+`$ kubectl create namespace istio-system`
+
+Get crds:
+`$ kubectl get crd`
 
 >Clean up
 
@@ -129,4 +141,9 @@ metadata:
 
  # Mongo Db commands:
 
+# Important linux command
+
+For finding file in folder 
+
+`$ find | grep <any file name>` 
   

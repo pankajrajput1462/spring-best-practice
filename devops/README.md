@@ -113,6 +113,9 @@ Add namespace:
 Get crds:
 `$ kubectl get crd`
 
+ Step to execute CRDs init:
+ `$ for i in install/kubernetes/helm/istio-init/files/crd*yaml; do kubectl apply -f $i; done`
+
 >Clean up
 
 Now you can clean up the resources you created in your cluster:
@@ -146,4 +149,28 @@ metadata:
 For finding file in folder 
 
 `$ find | grep <any file name>` 
-  
+
+# For uninstalling virtual box
+
+Install virtual box:
+`$ sudo apt-get install virtualbox`
+
+Get version details:
+`vboxmanage --version`
+
+To remove VirtualBox:
+`$ sudo apt-get remove virtualbox-\*`
+
+Remove global configuration files too:
+`$ sudo apt-get purge virtualbox-\*`
+
+delete all virtual machines and settings and Virtual Hard Drives:
+
+`sudo rm ~/"VirtualBox VMs" -Rf`
+`sudo rm ~/.config/VirtualBox/ -Rf`  
+
+Check virtual box process:
+`$ sudo ps aux | grep -i "vbox"`
+
+Kill any "ghost" processes:
+`$ sudo pkill VBox*`

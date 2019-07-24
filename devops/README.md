@@ -150,7 +150,7 @@ For finding file in folder
 
 `$ find | grep <any file name>` 
 
-# For uninstalling virtual box
+# virtual box
 
 Install virtual box:
 `$ sudo apt-get install virtualbox`

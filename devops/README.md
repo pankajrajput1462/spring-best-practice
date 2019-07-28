@@ -180,6 +180,8 @@ Kill any "ghost" processes:
 Commit and Push to repo
 `$ git commit -m "Added folder structure " && git push origin master`
 
+# Docker commands
+
 Before performing the removal command, you can get a list of all non-running (stopped) containers that will be removed using the following command:
 `docker container ls -a --filter status=exited --filter status=created`
 

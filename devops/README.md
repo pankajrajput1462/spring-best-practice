@@ -245,3 +245,6 @@ Find the network:
 
 Remove the network:
 `$ docker network rm <Network Name>`
+
+open container:
+`$ sudo docker exec -it <ContainerId> sh`

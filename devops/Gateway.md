@@ -10,10 +10,13 @@ zipkin-tracing_service2_1      /bin/sh -c /usr/local/bin/ ...   Up      10000/tc
 zipkin-tracing_zipkin_1        /busybox/sh run.sh               Up      9410/tcp, 0.0.0.0:9411->9411/tcp
 
 In this:    
-       exposed port is : 8000
- For accessing the URL for new service:       
+exposed port is : 8000
+For accessing the URL for new service:       
 
 `http://localhost:8000/trace/2`
 
-for accessig dashboard:
+For accessig dashboard:
 `http://localhost:8001/`
+
+For zipkin url:
+    `http://localhost:9411/zipkin/`

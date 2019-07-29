@@ -250,3 +250,63 @@ Remove the network:
 
 open container:
 `$ sudo docker exec -it <ContainerId> sh`
+
+# Elastic Search 
+
+1. Start by updating the packages index and installing the apt-transport-https package that necessary to access a repository over HTTPS:
+
+`$ sudo apt update`
+`$ sudo apt install apt-transport-https`
+
+2. Import the repository’s GPG using the following wget command:
+`$ wget -qO - https://artifacts.elastic.co/GPG-KEY-elasticsearch | sudo apt-key add -`
+ Output: `OK`
+
+3. Add the Elasticsearch repository to the system by issuing:
+`$ sudo sh -c 'echo "deb https://artifacts.elastic.co/packages/7.x/apt stable main" > /etc/apt/sources.list.d/elastic-7.x.list'`
+
+4. Once the repository is enabled, update the apt package list and install the Elasticsearch engine by typing:
+`$ sudo apt update`
+`$ sudo apt install elasticsearch`
+
+5. Elasticsearch service will not start automatically after the installation process is complete. To start the service and enable the service run:
+`$ sudo systemctl enable elasticsearch.service`
+`$ sudo systemctl start elasticsearch.service`
+`$ sudo systemctl stop elasticsearch.service`
+
+6. Verify that Elasticsearch
+`$ curl -X GET "localhost:9200/"`
+Output: 
+        ` {
+  "name" : "kwEpA2Q",
+  "cluster_name" : "elasticsearch",
+  "cluster_uuid" : "B-5B34LXQFqDeIYwSgD3ww",
+  "version" : {
+    "number" : "7.0.0",
+    "build_flavor" : "default",
+    "build_type" : "deb",
+    "build_hash" : "b7e28a7",
+    "build_date" : "2019-04-05T22:55:32.697037Z",
+    "build_snapshot" : false,
+    "lucene_version" : "8.0.0",
+    "minimum_wire_compatibility_version" : "6.7.0",
+    "minimum_index_compatibility_version" : "6.0.0-beta1"
+  },
+  "tagline" : "You Know, for Search"
+} `
+
+> Note
+It will take 5-10 seconds for the service to start. If you see curl: (7) Failed to connect to localhost port 9200: Connection refused, wait for a few seconds and try again.
+
+>Configuring Elasticsearch
+
+Elasticsearch data is stored in the /var/lib/elasticsearch directory, configuration files are located in /etc/elasticsearch and Java start-up options can be configured in the /etc/default/elasticsearch file.
+
+Edit configuration file in your favorite text editor and update it:
+
+`sudo vi /etc/elasticsearch/elasticsearch.yml`
+
+Change the following values:
+`network.host: localhost
+ cluster.name: myCluster1
+ node.name: "myNode1" `

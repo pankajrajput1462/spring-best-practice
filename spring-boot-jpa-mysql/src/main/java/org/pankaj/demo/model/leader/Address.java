@@ -1,15 +1,16 @@
-package org.pankaj.demo.model;
+package org.pankaj.demo.model.leader;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import lombok.extern.slf4j.Slf4j;
 
-import javax.persistence.*;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import javax.validation.constraints.NotBlank;
 
-@Slf4j
-@Entity
 @Data
+@Entity(name = "address")
 @NoArgsConstructor
 public class Address {
     @Id
@@ -21,8 +22,4 @@ public class Address {
 
     @NotBlank(message = "country is mandatory")
     private String country;
-
-    @ManyToOne(fetch = FetchType.LAZY, optional = false)
-    private Address address;
-
 }

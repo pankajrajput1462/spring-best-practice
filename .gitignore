@@ -24,9 +24,9 @@
 /micro-service-sample/gateway-service/gateway-service.iml
 /embedpractice/target/
 /embedpractice/embedtest.iml
-/micro-service-sample/discovery-service/target/
-/micro-service-sample/discovery-service/discovery-service.iml
-/micro-service-sample/customer-service/customer-service.iml
-/micro-service-sample/customer-service/target/
-/micro-service-sample/account-service/target/
-/micro-service-sample/account-service/account-service.iml
+/micro-service-netflix-oss/discovery-service/target/
+/micro-service-netflix-oss/discovery-service/discovery-service.iml
+/micro-service-netflix-oss/customer-service/customer-service.iml
+/micro-service-netflix-oss/customer-service/target/
+/micro-service-netflix-oss/account-service/target/
+/micro-service-netflix-oss/account-service/account-service.iml

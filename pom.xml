@@ -26,11 +26,10 @@
         <module>spring-boot-elasticsearch</module>
         <module>spring-boot-jwt-auth</module>
         <module>spring-boot-rabbitmq-integration-test</module>
-        <module>micro-service-sample</module>
+        <module>micro-service-netflix-oss</module>
         <module>spring-boot-rest-service</module>
-        <module>spring-rest-consuming</module>
-        <module>embedpractice</module>
-        <module>spring_mongo</module>
+        <module>spring-boot-rest-consuming</module>
+        <module>spring-boot-rest-mongo</module>
     </modules>
 
 </project>

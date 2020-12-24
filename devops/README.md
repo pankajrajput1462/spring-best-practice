@@ -30,7 +30,8 @@ List running docker process:
  - [https://stackoverflow.com/questions/23735149/what-is-the-difference-between-a-docker-image-and-a-container](https://link)
  - [https://stackoverflow.com/questions/31115098/in-docker-what-is-the-difference-between-an-image-and-a-repository](https://link)
  
- 
+ To remove all <name imaages>
+ `docker images -f "dangling=true"  -q`
  
 
 

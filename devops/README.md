@@ -5,6 +5,10 @@
 
 List of images: `$ docker images`
 
+> Container statics and details in terminal:
+ 
+ `$ docker stats`
+
 To expose just one port, this is what you need to do: `$ docker run -p <host_port>:<container_port>`
 
 To expose multiple ports, simply provide multiple -p arguments:

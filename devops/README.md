@@ -305,3 +305,14 @@ Change the following values:
 `network.host: localhost
  cluster.name: myCluster1
  node.name: "myNode1" `
+ 
+ # MySQL
+ > step for running docker container for my sql for dev
+ 
+ First run the Images:
+ `sudo docker run --detach --name=mysql-dev --env="MYSQL_ROOT_PASSWORD=root" mysql`
+
+
+Then Run with Host IP
+
+ `mysql -uroot -proot -h 172.17.0.2 -P 3306`

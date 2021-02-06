@@ -35,6 +35,10 @@ For remove: all stopped containers, all networks not used by at least one contai
 List of all active and inactive container
 `$ docker container ls -a`
 
+Run container eg. my sql docker image
+
+`sudo docker container run -d  {ImageId} --env="MYSQL_ROOT_PASSWORD=root"`
+
 For removing container:
 `$ docker container rm <container_Id 1> <container_id2>`
 

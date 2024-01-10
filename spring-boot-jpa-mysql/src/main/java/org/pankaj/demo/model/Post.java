@@ -1,8 +1,9 @@
 package org.pankaj.demo.model;
 
+import jakarta.persistence.*;
 import lombok.Data;
 
-import javax.persistence.*;
+
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 

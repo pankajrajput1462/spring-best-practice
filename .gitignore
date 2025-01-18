@@ -30,3 +30,15 @@
 /micro-service-netflix-oss/customer-service/target/
 /micro-service-netflix-oss/account-service/target/
 /micro-service-netflix-oss/account-service/account-service.iml
+spring-boot-rest-mongo/.vscode/settings.json
+spring-boot-rest-mongo/target/*
+spring-boot-batch/target/*
+spring-boot-elasticsearch/target/*
+spring-boot-jpa-mysql/target/*
+spring-boot-jwt-auth/target/*
+spring-boot-push-notification/target/*
+spring-boot-rabbitmq/target/*
+spring-boot-rest-auth/target/*
+spring-boot-rest-consuming/target/*
+spring-boot-rest-service/target/*
+spring-boot-retry/target/*

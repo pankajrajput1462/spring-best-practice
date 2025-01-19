@@ -42,3 +42,5 @@ spring-boot-rest-auth/target/*
 spring-boot-rest-consuming/target/*
 spring-boot-rest-service/target/*
 spring-boot-retry/target/*
+spring-boot-rest-mongo/.vscode/java-formatter.xml
+.DS_Store
